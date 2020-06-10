@@ -143,9 +143,11 @@ public class Bst
             return data;
         }
 
+        // for all dfs's below
+        ArrayList<Node> data=new ArrayList<Node>();
+
         public ArrayList<Node> DFSPreOrder()
         {
-            ArrayList<Node> data=new ArrayList<Node>();
                 
                 traverse1(this.root);
 
@@ -173,11 +175,10 @@ public class Bst
 
                 }
 
+
         public ArrayList<Node> DFSInOrder()
         {            
-            ArrayList<Node> data=new ArrayList<Node>();
                  
-
                 traverse2(this.root);
 
                  for (Node n : data)
@@ -204,7 +205,6 @@ public class Bst
 
         public ArrayList<Node> DFSPostOrder()
         {            
-            ArrayList<Node> data=new ArrayList<Node>();
                  
                
                 traverse3(this.root);
@@ -255,9 +255,9 @@ public class Bst
         boolean myResult = myBst.find(9);
         System.out.println(myResult);
 
-        myBst.Breath_First_Search();
+        // myBst.Breath_First_Search();
 
-        myBst.DFSPreOrder();
+        myBst.DFSPostOrder();
 
 
 
