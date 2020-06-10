@@ -40,6 +40,45 @@ public class SearchingAlgos
     } 
 
     
+     public int stringSearch(String grander, String lesser)
+     {
+
+        int count = 0 ;
+
+
+        for(char i = 0; i < grander.length() ;i++)
+        {
+            for(char j = 0; j < lesser.length() ;j++)
+            {
+                if(  lesser.charAt(j) != grander.charAt(i + j ) )
+                {
+                    break;
+                }
+                if(j == lesser.length()-1)
+                {
+                    count ++;
+                }
+
+            }
+
+        }
+
+        System.out.println(count);
+        return count;
+
+     }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -58,7 +97,7 @@ public class SearchingAlgos
 
         program.binarySearch(list,13523235);
 
-
+        program.stringSearch("lorie loled","lo");
 
             
 
