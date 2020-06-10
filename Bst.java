@@ -143,26 +143,25 @@ public class Bst
             return data;
         }
 
-        // for all dfs's below
-        ArrayList<Node> data=new ArrayList<Node>();
+        ArrayList<Node> data1=new ArrayList<Node>();
 
         public ArrayList<Node> DFSPreOrder()
         {
                 
                 traverse1(this.root);
 
-                 for (Node n : data)
+                 for (Node n : data1)
                     {
                         System.out.println(n.value);
                     }
 
-                return data;
+                return data1;
         }
 
          public void traverse1(Node node)
                 {
 
-                    data.add(node);
+                    data1.add(node);
                     if(node.left != null)
                     {
                         traverse1(node.left);
@@ -175,18 +174,19 @@ public class Bst
 
                 }
 
+        ArrayList<Node> data2=new ArrayList<Node>();
 
         public ArrayList<Node> DFSInOrder()
         {            
                  
                 traverse2(this.root);
 
-                 for (Node n : data)
+                 for (Node n : data2)
                     {
                         System.out.println(n.value);
                     }
                     
-                return data;
+                return data2;
 
         }
          public void traverse2(Node node)
@@ -195,7 +195,7 @@ public class Bst
                     {
                         traverse2(node.left);
                     }
-                    data.add(node);
+                    data2.add(node);
                     if(node.right != null)
                     {
                         traverse2(node.right);
@@ -203,18 +203,20 @@ public class Bst
 
                 }
 
+        ArrayList<Node> data3=new ArrayList<Node>();
+
         public ArrayList<Node> DFSPostOrder()
         {            
                  
                
                 traverse3(this.root);
 
-                 for (Node n : data)
+                 for (Node n : data3)
                     {
                         System.out.println(n.value);
                     }
                     
-                return data;
+                return data3;
 
         }
         public void traverse3(Node node)
@@ -228,7 +230,7 @@ public class Bst
                 {
                     traverse3(node.right);
                 } 
-                 data.add(node);
+                 data3.add(node);
 
 
                 }
@@ -253,18 +255,25 @@ public class Bst
         myBst.insert(65);
 
         boolean myResult = myBst.find(9);
+
+
         System.out.println(myResult);
 
-        // myBst.Breath_First_Search();
+        System.out.println("-------------------");
+
+        myBst.Breath_First_Search();
+
+        System.out.println("-------------------");
+
+        myBst.DFSPreOrder(); 
+
+        System.out.println("-------------------");
+
+        myBst.DFSInOrder();
+
+        System.out.println("-------------------");
 
         myBst.DFSPostOrder();
-
-
-
-
-
-
-
 
 
 
