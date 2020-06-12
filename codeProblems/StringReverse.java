@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+// Write a function that takes a list of characters and reverses the letters in place. 
 
 
 public class StringReverse
@@ -36,6 +37,8 @@ public class StringReverse
         StringReverse program = new StringReverse();
     
         char myList[] = {'h','i','s','t','o','r','y'};
+        
+        System.out.println(myList);
 
         program.string_reverse_in_place(myList);
 
