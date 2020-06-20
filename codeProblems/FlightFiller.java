@@ -14,7 +14,6 @@ public class FlightFiller
 {
 
 
-
     public boolean can_two_movies_fill_flight(int movie_lengths[], int flight_length)
     {
        Set<Integer> movie_lengths_seen = new HashSet<>();

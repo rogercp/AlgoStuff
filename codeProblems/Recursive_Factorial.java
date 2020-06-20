@@ -1,6 +1,8 @@
 import java.lang.Math;
 import java.util.ArrayList;
 
+
+
 public class Recursive_Factorial
 {
 
@@ -13,11 +15,10 @@ public class Recursive_Factorial
             return n;
         }
 
+
         return n * recurse_fact(n-1);
 
     }
-
-
 
 
 
@@ -30,7 +31,7 @@ public class Recursive_Factorial
     
         System.out.println(program.recurse_fact(5));
 
-        
+
         // Calll Stack///////
 
         //  5 * recurs_fact (5-1)—>120 —>answer

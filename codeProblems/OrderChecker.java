@@ -32,15 +32,15 @@ public class OrderChecker
         while(servedIndex < servedSize)
         {
 
-            boolean takeoutisexahsted = takeOutIndex <= takeOut.length-1;
-            boolean dineinisexahsted = dineInIndex <= dineIn.length-1;
+            boolean takeoutisnotexahsted = takeOutIndex <= takeOut.length-1;
+            boolean dineinisnotexahsted = dineInIndex <= dineIn.length-1;
 
-            if( dineinisexahsted == true && served[servedIndex] == dineIn[dineInIndex])
+            if( dineinisnotexahsted == true && served[servedIndex] == dineIn[dineInIndex])
             {
                 dineInIndex += 1;
                 servedIndex += 1;
             }
-            else if( takeoutisexahsted == true && served[servedIndex] == takeOut[takeOutIndex] )
+            else if( takeoutisnotexahsted == true && served[servedIndex] == takeOut[takeOutIndex] )
             {
                 takeOutIndex += 1;
                 servedIndex += 1;
