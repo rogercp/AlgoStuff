@@ -235,6 +235,51 @@ public class Bst
 
                 }
 
+
+
+
+        // public boolean checkValidity()
+        // {
+
+
+        //     boolean trueorfalse = traverse(this.root);
+
+        //     System.out.println(trueorfalse + "true or dalse");
+
+        //     return trueorfalse;
+
+        // }
+
+
+        // public boolean traverse(Node node)
+        //     {
+
+        //       if(node.left.value < node.value)
+        //       {
+        //          traverse(node.left);
+        //       }
+               
+        //       else if (node.left.value >= node.value)
+        //       {
+        //         return false;
+
+        //       }
+        //       if(node.right.value > node.value)
+        //       {
+        //         traverse(node.right);  
+
+        //       }
+        //       else if (node.left.value <= node.value)
+        //       {
+        //         return false;
+        //       } 
+              
+        //       return true ;
+
+        //  }
+
+
+
     
 
 }
@@ -275,6 +320,7 @@ public class Bst
 
         myBst.DFSPostOrder();
 
+        // System.out.println(myBst.checkValidity());
 
 
         }

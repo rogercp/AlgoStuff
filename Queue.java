@@ -3,8 +3,7 @@ import java.util.Scanner;
 
 public class Queue
 {
-
-
+ 
     public class Node
     {
         public int value;
