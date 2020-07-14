@@ -1,7 +1,3 @@
-// Name:Rogelio Caballero 
-// SID#:0480110
-// Date: 13 July 2020
-// Description: program that uses giu interface to calculate users monthly payment and TPC for a borrowed amount
 
 import java.util.Scanner;
 import java.util.Random;
