@@ -75,7 +75,7 @@ class HighestProduct {
 
         HighestProduct program = new HighestProduct();
 
-        int[] myArray = {4,45,2,34,-67,21,24,45,78,66,11,35};
+        int[] myArray = {4,45,2,34,-67,21,24,45,78,78,66,11,35};
 
         int returnVal = program.highest_product_of_three(myArray);
        
