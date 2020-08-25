@@ -51,7 +51,14 @@ public class ScoreSort
 
 		int[] returnVal = program.sortScores(unsortedScores,highestScorePossible);
 
-		System.out.println(returnVal);
+
+		for(int j = 0; j < returnVal.length; j++)
+		{
+
+			System.out.println(returnVal[j]);
+		}
+
+
 
 
 
