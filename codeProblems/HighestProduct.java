@@ -15,15 +15,21 @@ class HighestProduct {
 
         double inf = Double.NEGATIVE_INFINITY;
 
+        // set initial integer variable to the first element in array
+        // then set the rest of the integers to the lowest possible number -infinity
         int int1 = inputArray[0];
         int int2 = (int)inf;
         int int3 = (int)inf;
 
+        // skip first index
         for( int i =1 ; i<inputArray.length; i++)
         {
 
-            System.out.println(int3);
 
+
+            // if the current index is greater than the third biggest integer 
+            // but less than the second biggest integer
+            // then assign it to the third boiggest variable
             if( inputArray[i] >= int3 && inputArray[i] < int2)
             {
 
@@ -32,8 +38,15 @@ class HighestProduct {
                 continue;
 
             }
+
+            // if the current index is greater than the second biggest integer 
+            // but less than the biggest integer
+            // then assign it to the second biggest variable
              if( inputArray[i] >= int2 && inputArray[i] < int1)
             {
+
+                // then shift the varibles with the lower integer value than the current index down
+                // by re-assigning the variables
                 int tempint2 = int2;
 
                 int2 = inputArray[i];
@@ -44,9 +57,13 @@ class HighestProduct {
 
             }
 
+            // if the current index is greater than the  biggest integer 
+            // then assign it to the  biggest variable
              if (inputArray[i]>= int1)
             {
 
+                // then shift the varibles with the lower integer value than the current index down
+                // by re-assigning the variables
                 int tempint1 = int1;
 
                 int tempint2again = int2;
@@ -64,6 +81,7 @@ class HighestProduct {
         }
 
 
+        //once the loop has run then return the product of the biggest integer variables
         return int1*int2*int3;
 
 
