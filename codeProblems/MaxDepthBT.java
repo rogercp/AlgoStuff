@@ -47,7 +47,6 @@
             //holding the current size of the queue 
             int size = queue.size();
             
-
             //while the size is greater than zero
             //also post decrement the size because
             //we will subsequently take out one node 
@@ -73,7 +72,7 @@
             count++;
         }
         
-        
+
         return count;
          
     }

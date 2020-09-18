@@ -9,6 +9,8 @@ public class SearchingAlgos
     public int binarySearch(int list[], int val)
     {
 
+
+        
         int start = 0;
         int end = list.length-1;
         int middle = (int) Math.floor((start + end) / 2);
