@@ -117,16 +117,18 @@ import java.util.*;
     public static void main(String[] args)
     {
 
-        // Meeting meeting1 = new Meeting(1, 10);
-        // Meeting meeting2 = new Meeting(2,6);
-        //  Meeting meeting3 = new Meeting(3,5);
-        //   Meeting meeting4 = new Meeting(7,9);
 
-        Meeting meeting1 = new Meeting(0, 1);
-         Meeting meeting2 = new Meeting(3, 5);
-          Meeting meeting3 = new Meeting(4, 8);
-           Meeting meeting4 = new Meeting(10, 12);
-            Meeting meeting5 = new Meeting(9, 10);
+
+        Meeting meeting1 = new Meeting(1, 10);
+        Meeting meeting2 = new Meeting(2,6);
+         Meeting meeting3 = new Meeting(3,5);
+          Meeting meeting4 = new Meeting(7,9);
+
+        // Meeting meeting1 = new Meeting(0, 1);
+        //  Meeting meeting2 = new Meeting(3, 5);
+        //   Meeting meeting3 = new Meeting(4, 8);
+        //    Meeting meeting4 = new Meeting(10, 12);
+        //     Meeting meeting5 = new Meeting(9, 10);
     
         ArrayList<Meeting> myMeetings = new ArrayList<Meeting>();
 
@@ -134,7 +136,7 @@ import java.util.*;
         myMeetings.add(meeting2);
         myMeetings.add(meeting3);
         myMeetings.add(meeting4);
-        myMeetings.add(meeting5);
+        // myMeetings.add(meeting5);
 
 
         ArrayList<Meeting> returnList = mergeRanges(myMeetings);
