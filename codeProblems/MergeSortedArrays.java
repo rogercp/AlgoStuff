@@ -97,7 +97,6 @@ class MergeSortedArrays {
                     //been added yet so we add it to our return array
                     returnArr[i] = myArray[k];
 
-
                 }
 
             }
