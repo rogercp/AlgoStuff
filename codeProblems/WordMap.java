@@ -33,6 +33,7 @@ class WordMap {
             }
 
 
+
             //  if(newString.charAt(i) == ',')
             // {
 
@@ -46,6 +47,8 @@ class WordMap {
 
             // }
 
+
+
             if(newString.charAt(i) == newString.length()-1)
             {
 
@@ -58,7 +61,6 @@ class WordMap {
                 break;
 
             }
-
 
 
                 startOfWordIndex = i;
