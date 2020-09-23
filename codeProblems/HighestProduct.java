@@ -134,7 +134,6 @@ class HighestProduct {
         //keeping track of the lowest number we see
         int lowest = Math.min(inputArray[0],inputArray[1]);
 
-
         //keeping track of the biggest output from two numbers 
         //be it two negative numbers which  become positive upon
         //multiplication or not
@@ -155,26 +154,34 @@ class HighestProduct {
             //hold a current value of the number
             int currentNum = inputArray[i]; 
 
-
-
+            //here we check to see if we have found ourselves a new highest product of three
+            //we use the highestproductOf or the lowest product of 
+            //this is because our current number may be negative and our lowestproductofTwo may also be negative 
+            //so we need need to continually be checking that
             highestProductOfThree = Math.max(Math.max(highestProductOfThree, currentNum*highestProductOfTwo), currentNum*lowestProductOfTwo);
 
+            //we need to check to see if we have a new highestProductOfTwo so we check every option 
+            //incliding the lowest variable from up top because there is a chance that the current 
+            //number and the lowest are both negative
             highestProductOfTwo = Math.max(Math.max(highestProductOfTwo, currentNum*highest), currentNum*lowest);
 
+            //we need to check to see if we have a new lowestProductOfTwo so we check every option 
+            //incliding the highest variable from up top because there is a chance that the current 
+            //number is negative and might make a new lowestProductOfTwo
             lowestProductOfTwo = Math.min(Math.min(lowestProductOfTwo, currentNum*highest), currentNum*lowest);
 
-
+            //stay on top of the updating and keep finding and updating the highest value
+            //so we can use it in our highest or lowest products updateing 
             highest = Math.max(highest,currentNum);
 
+            //stay on top of the updating and keep finding  and updating the lowest value
+            //so we can use it in our highest or lowest products updateing 
             lowest = Math.min(lowest,currentNum);
-
-
 
 
 
         }
 
-       
         return highestProductOfThree;
 
     }
