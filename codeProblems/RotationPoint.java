@@ -11,7 +11,6 @@ public class RotationPoint
   public static int findRotationPoint(String[] words) 
   {
    
-
   	// grab that first word
   	String returnString = words[0];
 
@@ -84,7 +83,7 @@ public class RotationPoint
 
   		//final keyword means it can only be assigned initally and cannot be 
   		//reassigned 
-  		//we are holding the first word here
+  		//we are holding the first word here for reference to see if we need to move the cieling or the floor
 	  	final String firstWord = words[0];
 
 	  	//create two indexes a beginning and 
@@ -155,8 +154,8 @@ public class RotationPoint
 
 				
 		String[] words = new String[]{
-		  "ptolemaic", "retrograde", "supplant", "undulate", "xenoepist",
-            "asymptote", "babka",
+		  "ptolemaic", "retrograde", "supplant", "undulate", "xenoepist","year", "zenophob",
+            "asymptote", "babka", "bro"
 		};
 
 		RotationPoint program = new RotationPoint();

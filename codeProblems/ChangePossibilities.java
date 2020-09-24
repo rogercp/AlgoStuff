@@ -2,36 +2,80 @@
 
 import java.util.*;
 
-class ChangePossibilities { 
+// Your quirky boss collects rare, old coins...
+
+// They found out you're a programmer and asked you to solve something they've been wondering for a long time.
+
+// Write a method that, given:
+
+// an amount of money
+// an array of coin denominations
+// computes the number of ways to make the amount of money with coins of the available denominations.
+
+public class ChangePossibilities { 
   
    
-    public static int changePossibilitiesBottomUp(int amount, int[] denominations) {
+   //taking a non-recursive bottom-up approach instead of recursives top-down approach
+    public int changePossibilitiesBottomUp(int amount, int[] denominations) 
+    {
 
-    int[] waysOfDoingNCents = new int[amount + 1];  // array of zeros from 0..amount
+        //create an array with the size of the amount +1 
+        //cus zero index.. 
+        int[] waysOfDoingNCents = new int[amount +1];
 
-    waysOfDoingNCents[0] = 1;
+        //set the zeroeth index to one there is one way to do the amount of zero
+        waysOfDoingNCents[0] = 1;
 
-    for (int coin : denominations) {
 
-        for (int higherAmount = coin; higherAmount <= amount; higherAmount++) {
+        //iterate throught the list of denominations isolating each individual coin
+        for(int coin: denominations)
+        {
 
-            int higherAmountRemainder = higherAmount - coin;
+            // create another loop for each coin denomination and stop only 
+            //when you reach the amount in the parameter
+            for(int higherAmount = coin ; higherAmount <= amount ;higherAmount++)
+            {
 
-            waysOfDoingNCents[higherAmount] += waysOfDoingNCents[higherAmountRemainder];
+                System.out.println(higherAmount+" higherAmount");
+                 System.out.println("---------");
+                  System.out.println(coin + " coin");
+                    System.out.println("++++++++++");
+
+
+                int higherAmountRemainder = higherAmount - coin;
+
+                                 System.out.println(higherAmountRemainder + " higherAmountRemainder");
+
+                                    System.out.println("^^^^^^^^^^^^^");
+
+
+                waysOfDoingNCents[higherAmount] += waysOfDoingNCents[higherAmountRemainder];
+
+
+            }
+
         }
-    }
 
-    return waysOfDoingNCents[amount];
-}
+
+
+
+
+
+
+        return waysOfDoingNCents[amount];
+
+
+    }
 
     public static void main(String args[]) 
     { 
         ChangePossibilities program = new ChangePossibilities(); 
-        int denominations[] = { 1,3,5 }; 
 
-        int result = program.changePossibilitiesBottomUp(5,denominations);
+        int denominations[] = {1, 2, 3}; 
 
-        
+        int result = program.changePossibilitiesBottomUp(4,denominations);
+
+        System.out.println(result);
 
        
     } 
