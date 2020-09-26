@@ -2,36 +2,52 @@ import java.util.*;
 import java.util.Random;
 
 
+//fisher yates shuffle
 public class InPlaceShuffle
 {
 
 
+//create random object
 private static Random rand = new Random();
 
-private static int getRandom(int floor, int ceiling) {
+//create random function to return random index number
+//within certain paramters
+private static int getRandom(int floor, int ceiling) 
+{
+
+    // use the nextInt Random object function 
     return rand.nextInt((ceiling - floor) + 1) + floor;
+
+
 }
 
 
 public static void shuffle(int[] array) {
 
    
-    if (array.length <= 1) {
+    if (array.length <= 1) 
+    {
         return;
     }
 
-   
-    for (int indexWeAreChoosingFor = 0;
-        indexWeAreChoosingFor < array.length - 1; indexWeAreChoosingFor++) {
+    //go through the array
+    for (int indexWeAreChoosingFor = 0;indexWeAreChoosingFor < array.length - 1; indexWeAreChoosingFor++) 
+    {
 
-     
+        //call the getRandom function with the current index and the length of the array 
+        //this ensures an unbiased permutation or that every permutation is equally likely 
         int randomChoiceIndex = getRandom(indexWeAreChoosingFor, array.length - 1);
 
-        if (randomChoiceIndex != indexWeAreChoosingFor) {
+        //so we just swap here simple swapping
+
+        if (randomChoiceIndex != indexWeAreChoosingFor) 
+        {
+
             int valueAtIndexWeChoseFor = array[indexWeAreChoosingFor];
             array[indexWeAreChoosingFor] = array[randomChoiceIndex];
             array[randomChoiceIndex] = valueAtIndexWeChoseFor;
         }
+
     }
 }
 
