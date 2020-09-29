@@ -30,23 +30,36 @@ import java.util.*;
 
 class MaxSubArray { 
   
- 
+
     public int maxSubArray(int[] nums) 
     {
 
+    	//set a global max to return in the end
     	 int maxSum = nums[0];
-     
+     	//set a current Sum while walking through array
          int currSum = nums[0];
 
-
+         //loop through the array
         for (int i = 1; i < nums.length; i++) 
         {
+
+	        System.out.println(maxSum+ " maxsum"); 
+
+	        System.out.println(currSum+ " currSum");
+
+	     	System.out.println("                   ");
+
+	     	// we set the current sum at each iteration
+	     	//we check the current number and the current sum plus the current number
+	     	//whichever is bigger is the new current sum
             currSum = Math.max(nums[i], currSum + nums[i]);
 
+            //we also look at our maxsum at each iteration 
+            //to make sure we always have the biggest maxsum
             maxSum = Math.max(maxSum, currSum);
         }
         
-        return maxSum
+        return maxSum;
     }
   
     public static void main(String args[]) 
