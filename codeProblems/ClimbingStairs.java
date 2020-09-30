@@ -87,6 +87,39 @@ class ClimbingStairs {
 
 
 
+	//bottom up approach as well
+	public int climbStairs2(int n) 
+	{
+		
+	    if (n <= 0)
+	    {
+	        return n;
+	    }
+
+
+	    int prevprev = 1;
+
+	    int prev = 1;
+
+	    int current = 0;
+
+	    
+	    for (int i=2; i <= n; i++)
+	    {
+
+	    	current = prevprev + prev;
+
+	    	prevprev = prev;
+
+	    	prev = current;
+
+
+	    }
+
+	    return current;
+	}
+
+
 
 
     public static void main(String args[]) 
@@ -94,7 +127,7 @@ class ClimbingStairs {
 
         ClimbingStairs program = new ClimbingStairs();
 
-        int result = program.climbStairs1(6);
+        int result = program.climbStairs2(6);
 
         System.out.println(result);
        

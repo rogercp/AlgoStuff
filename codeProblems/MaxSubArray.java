@@ -43,11 +43,6 @@ class MaxSubArray {
         for (int i = 1; i < nums.length; i++) 
         {
 
-	        System.out.println(maxSum+ " maxsum"); 
-
-	        System.out.println(currSum+ " currSum");
-
-	     	System.out.println("                   ");
 
 	     	// we set the current sum at each iteration
 	     	//we check the current number and the current sum plus the current number
