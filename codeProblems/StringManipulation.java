@@ -9,44 +9,41 @@ import java.util.*;
 
 
 
-
-    public void reverseWords(char s[])
+    //reversing a string set as an array 
+    //in java strings are immutable
+    public void reverseString(char s[])
     {
 
+        //two pointers beginning and end
+        int left = 0;
 
-        int startOfSubStringIndex = 0;
+        int right = s.length-1;
 
-        for(int i=0; i<s.length; i++)
+        //loop until the left overtakes the right
+        while(left < right)
         {
 
-            if(s[i] == ' ' || i == s.length-1)
-            {
+            //set a temporary variable be because we will overwrite it
+            char temp = s[left];
 
-                if(i != s.length-1)
-                {
-                    this.reverseString(s,startOfSubStringIndex,i-1);
-                     startOfSubStringIndex = i+1;
-                }else
-                {
-                    this.reverseString(s,startOfSubStringIndex,i);
-                }
-                
+            //set the left index to the right one 
+            s[left] = s[right];
 
+            //set the right index to the left one or the temp one 
+            s[right]= temp;
 
+            //increment the the pointers or decrement
+            left ++;
 
-            }
-
-
+            right --;
         }
-
-        this.reverseString(s);
 
 
     }
 
 
 
-
+   //overloaded method
     public void reverseString(char s[], int leftIndex, int rightIndex)
     {
 
@@ -54,14 +51,16 @@ import java.util.*;
         while(leftIndex < rightIndex)
         {
 
+            //set a temporary variable be because we will overwrite it
             char temp = s[leftIndex];
 
+            //set the left index to the right one 
             s[leftIndex] = s[rightIndex];
 
-
+            //set the right index to the left one or the temp one 
             s[rightIndex]= temp;
 
-
+             //increment the the pointers or decrement
             leftIndex ++;
 
             rightIndex --;
@@ -75,29 +74,49 @@ import java.util.*;
 
 
 
-    public void reverseString(char s[])
+
+    public void reverseWords(char s[])
     {
 
-        int left = 0;
+        //
+        int startOfSubStringIndex = 0;
 
-        int right = s.length-1;
-
-
-        while(left < right)
+        //walk through the whole array of characters
+        for(int i=0; i<s.length; i++)
         {
 
-            char temp = s[left];
+            //if we hit an empty space character or the end of the array 
+            //we run this block
+            if(s[i] == ' ' || i == s.length-1)
+            {
 
-            s[left] = s[right];
+                //if its not the end of the array 
+                //meaning its an empty space character
+                if(i != s.length-1)
+                {
+                    //we reverse the substring by sending it to another method
+                    this.reverseString(s,startOfSubStringIndex,i-1);
+
+                    //after we increase the start of the substring variable 
+                    //skipping the empty space 
+                     startOfSubStringIndex = i+1;
+                }
+                //if its the end of the array
+                else
+                {
+                    //we reverse the substring by sending it to another method
+                    //here there is no need to increase the substring variable because 
+                    //we reached the end 
+                    this.reverseString(s,startOfSubStringIndex,i);
+                }
+                
+            }
 
 
-            s[right]= temp;
-
-
-            left ++;
-
-            right --;
         }
+
+        //we reverse it one last time to get the correct order of the characters
+        this.reverseString(s);
 
 
     }
