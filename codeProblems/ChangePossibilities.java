@@ -36,23 +36,33 @@ public class ChangePossibilities {
             for(int higherAmount = coin ; higherAmount <= amount ;higherAmount++)
             {
 
-                System.out.println(higherAmount+" higherAmount");
-                 System.out.println("---------");
-                  System.out.println(coin + " coin");
-                    System.out.println("++++++++++");
+                // System.out.println(higherAmount+" higherAmount");
+                //  System.out.println("---------");
+                //   System.out.println(coin + " coin");
+                //     System.out.println("++++++++++");
+
+
 
 
                 int higherAmountRemainder = higherAmount - coin;
 
-                                 System.out.println(higherAmountRemainder + " higherAmountRemainder");
+                                 // System.out.println(higherAmountRemainder + " higherAmountRemainder");
 
-                                    System.out.println("^^^^^^^^^^^^^");
+                                 //    System.out.println("^^^^^^^^^^^^^");
 
 
                 waysOfDoingNCents[higherAmount] += waysOfDoingNCents[higherAmountRemainder];
 
 
             }
+
+
+            for(int i =0; i<waysOfDoingNCents.length;i++)
+            {
+                System.out.println(waysOfDoingNCents[i]);
+            }
+
+            System.out.println("--------------------");
 
         }
 
@@ -71,9 +81,9 @@ public class ChangePossibilities {
     { 
         ChangePossibilities program = new ChangePossibilities(); 
 
-        int denominations[] = {1, 2, 3}; 
+        int denominations[] = {1, 5, 10,25}; 
 
-        int result = program.changePossibilitiesBottomUp(4,denominations);
+        int result = program.changePossibilitiesBottomUp(100,denominations);
 
         System.out.println(result);
 
