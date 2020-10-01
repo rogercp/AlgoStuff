@@ -107,14 +107,6 @@ import java.util.*;
 
 
 
-
-
-
-
-
-
-
-
 class HighestProduct { 
   
 

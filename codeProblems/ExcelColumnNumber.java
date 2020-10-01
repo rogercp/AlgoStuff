@@ -39,15 +39,24 @@ class ExcelColumnNumber {
     public int titleToNumber(String s) 
     {
        
-        //out accumulator for our return value
+        //our accumulator for our return value
         int num = 0;
 
+        // a variable for tracking the power
         int j = 0;
 
-        //loop from the rear forwards
+        //loop from the rear forwards because the last
+        //character is the one where we have to worry about the absolute value 
+        // without any power influence from j 
         for(int i = s.length()-1; i >= 0; i--)
         {
 
+            System.out.println(s.charAt(i) - 64);
+            System.out.println(j+" power");
+
+            System.out.println("            ");
+
+            
             num += Math.pow(26,j)*(s.charAt(i)-64);
 
             
@@ -67,7 +76,7 @@ class ExcelColumnNumber {
         ExcelColumnNumber program = new ExcelColumnNumber();
 
 
-        int result = program.titleToNumber("AAA");
+        int result = program.titleToNumber("ZY");
 
         System.out.println(result);
        

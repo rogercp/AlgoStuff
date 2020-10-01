@@ -32,6 +32,7 @@ public class MemoFib {
     }
 
 
+//bottom up non recursive approach
   public static int bestFib(int n) {
 
     // edge cases:
@@ -48,7 +49,7 @@ public class MemoFib {
     int current = 0;   // Declare and initialize current
 
     for (int i = 1; i < n; i++) {
-
+ 
         // Iteration 1: current = 2nd fibonacci
         // Iteration 2: current = 3rd fibonacci
         // Iteration 3: current = 4th fibonacci

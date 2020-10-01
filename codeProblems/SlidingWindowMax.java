@@ -1,10 +1,5 @@
 
 
-
-
-
-
-
 import java.util.*;
 
 // Write a function that receives an array of integers and returns

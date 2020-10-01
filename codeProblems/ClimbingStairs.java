@@ -35,7 +35,7 @@ class ClimbingStairs {
 	    return (n > 0) ? b : 0;
         
 	
-    
+
 	}
 
 
