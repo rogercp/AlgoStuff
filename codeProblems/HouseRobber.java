@@ -23,6 +23,7 @@ class HouseRobber {
     {
 
          int rob = 0;
+         
          int noRob = 0;
         
         for (int n: nums) 

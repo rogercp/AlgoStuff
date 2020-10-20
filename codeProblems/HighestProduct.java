@@ -127,7 +127,7 @@ class HighestProduct {
         int lowest = Math.min(inputArray[0],inputArray[1]);
 
         //keeping track of the biggest output from two numbers 
-        //be it two negative numbers which  become positive upon
+        //be it two negative numbers which  become positive upon 
         //multiplication or not
         int highestProductOfTwo = inputArray[0] * inputArray[1];
 
@@ -140,7 +140,7 @@ class HighestProduct {
 
 
         //skip three indexes cuz we have the highest product for those set
-        for(int i = 2 ; i< inputArray.length; i++)
+        for(int i = 2 ; i< inputArray.length; i++) 
         {
 
             //hold a current value of the number

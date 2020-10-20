@@ -17,7 +17,7 @@ class ValidAnagram {
 	    }
 
 		//create hashmap to store character and the occurences
-		 Map<Character, Integer> map = new HashMap<>();
+		Map<Character, Integer> map = new HashMap<>();
 
 
 		 //iterate shorthand through String

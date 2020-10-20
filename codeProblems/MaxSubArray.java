@@ -43,7 +43,6 @@ class MaxSubArray {
         for (int i = 1; i < nums.length; i++) 
         {
 
-
 	     	// we set the current sum at each iteration
 	     	//we check the current number and the current sum plus the current number
 	     	//whichever is bigger is the new current sum
