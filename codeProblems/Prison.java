@@ -12,14 +12,26 @@ public class Prison
 public static long prison(int n, int m, List<Integer> h, List<Integer> v) 
     {
         
-        long endResult;
-        
-        
-        for(int j =0 ;j< v.size();j++)
-        {
-            System.out.println(v.get(j));
-        }
+       long endResult;
+        int horizontalMult = 1;
+        int verticalMult = 1;
 
+        
+
+
+        if(m > 100000 || n > 100000 || m <=0 || n<=0 )
+        {
+            throw new IllegalArgumentException("INVALID Arguments");
+
+        }
+        
+        if(v.size() >m || h.size() >n ||v.size() <= 0 || h.size() <=0 )
+        {
+            throw new IllegalArgumentException("INVALID Arguments");
+
+        }
+      
+       
         
         int[] horizontal = new int[m+1];
         
@@ -42,18 +54,25 @@ public static long prison(int n, int m, List<Integer> h, List<Integer> v)
         
         for( int u = 0 ;u < h.size(); u++)
         {      
+            if(h.get(u) > n)
+            {
+                 throw new IllegalArgumentException("INVALID");
+            }
             vertical[h.get(u)] = 0;             
         } 
           
         for( int p = 0 ;p < v.size(); p++)
         {  
+             if(v.get(p) > m)
+            {
+                 throw new IllegalArgumentException("INVALID");
+            }
             horizontal[v.get(p)] = 0;    
         }
         
-
+ 
 
  ////////////////////////////////////////////////////
-        int horizontalMult = 1;
         int horizontalRunning = 1;
         
         
@@ -78,7 +97,6 @@ public static long prison(int n, int m, List<Integer> h, List<Integer> v)
         }
         
         
-        int verticalMult = 1;
         int verticalRunning = 1;
            
         for(int s = 0; s<vertical.length;s++)
@@ -102,10 +120,11 @@ public static long prison(int n, int m, List<Integer> h, List<Integer> v)
  
 //////////////////////////////////////////
         
-         endResult = horizontalMult * verticalMult;
+         endResult = (long)horizontalMult * (long)verticalMult;
      
         
         return endResult;
+
 
     }
 
