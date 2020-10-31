@@ -93,9 +93,9 @@ public class PalindromeLongest
 
 		PalindromeLongest program = new PalindromeLongest();
 
-		System.out.println(program.lengthOfLongestPalindrome("babab"));
-		System.out.println(program.lengthOfLongestPalindrome("bb"));
-		System.out.println(program.lengthOfLongestPalindrome("racecar"));
+		// System.out.println(program.lengthOfLongestPalindrome("babab"));
+		// System.out.println(program.lengthOfLongestPalindrome("bb"));
+		// System.out.println(program.lengthOfLongestPalindrome("racecar"));
 		System.out.println(program.lengthOfLongestPalindrome("babmadamab"));
 
 
