@@ -47,10 +47,20 @@ public class PickingTickets {
     { 
         PickingTickets program = new PickingTickets(); 
 
-         {4, 13, 2, 3}
+
+        List<Integer> myArrList = new ArrayList<Integer>();
+
+        myArrList.add(4);
+        myArrList.add(13);
+        myArrList.add(2);
+        myArrList.add(3);
 
 
-        program.maxTickets()
+
+        int val = program.maxTickets(myArrList);
+
+        System.out.println(val);
+
        
     } 
 } 
