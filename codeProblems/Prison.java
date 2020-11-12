@@ -12,13 +12,17 @@ public class Prison
 public static long prison(int n, int m, List<Integer> h, List<Integer> v) 
     {
         
+
+        //create a long for the end mult result 
+        //create a horizontal integer var and a 
+        //vertical integer var
         long endResult;
         int horizontalMult = 1;
         int verticalMult = 1;
 
         
 
-
+        //some checks here for the arguments  h,m,m,n
         if(m > 100000 || n > 100000 || m <=0 || n<=0 )
         {
             throw new IllegalArgumentException("INVALID Arguments");
@@ -32,13 +36,14 @@ public static long prison(int n, int m, List<Integer> h, List<Integer> v)
         }
       
        
-        
+        //create a horizontal and vertical array from the parameters m and n
         int[] horizontal = new int[m+1];
         
         int[] vertical = new int[n+1];
         
 ///////////////////////////////////////////
           
+        //fill both arrats with values of 1
         for(int i =0 ;i<= m;i++)
         {
             horizontal[i] = 1;   
@@ -51,7 +56,8 @@ public static long prison(int n, int m, List<Integer> h, List<Integer> v)
         
         
       
-        
+        //check the incoming arraylists and 
+        //switch the values of 1 to a value of zero 
         for( int u = 0 ;u < h.size(); u++)
         {      
             if(h.get(u) > n)
@@ -73,9 +79,11 @@ public static long prison(int n, int m, List<Integer> h, List<Integer> v)
  
 
  ////////////////////////////////////////////////////
+        //running total for horizontal
         int horizontalRunning = 1;
         
-        
+        //go through the array and check to see if there are any 
+        //0's if there are you add it to the running total
         for(int k = 0; k<horizontal.length;k++)
         {
 
@@ -97,8 +105,11 @@ public static long prison(int n, int m, List<Integer> h, List<Integer> v)
         }
         
         
+        //running total for vertical
         int verticalRunning = 1;
            
+          //go through the array and check to see if there are any 
+        //0's if there are you add it to the running total
         for(int s = 0; s<vertical.length;s++)
         {
             if(vertical[s] == 0)
@@ -119,7 +130,7 @@ public static long prison(int n, int m, List<Integer> h, List<Integer> v)
         
  
 //////////////////////////////////////////
-        
+        //convert the integers to longs and return the multiplication endresult
          endResult = (long)horizontalMult * (long)verticalMult;
      
         
@@ -147,9 +158,6 @@ public static long prison(int n, int m, List<Integer> h, List<Integer> v)
         Long returnVal = program.prison(3,3,listOne,listtwo);
 
         System.out.println(returnVal);
-
-
-
 
 
 
