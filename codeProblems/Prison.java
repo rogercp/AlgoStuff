@@ -12,7 +12,7 @@ public class Prison
 public static long prison(int n, int m, List<Integer> h, List<Integer> v) 
     {
         
-       long endResult;
+        long endResult;
         int horizontalMult = 1;
         int verticalMult = 1;
 
@@ -136,6 +136,24 @@ public static long prison(int n, int m, List<Integer> h, List<Integer> v)
     {
 
         Prison program = new Prison();
+
+
+        List<Integer> listOne = new ArrayList<Integer>();
+        List<Integer> listtwo = new ArrayList<Integer>();
+
+        listOne.add(2);
+        listtwo.add(2);
+
+        Long returnVal = program.prison(3,3,listOne,listtwo);
+
+        System.out.println(returnVal);
+
+
+
+
+
+
+        
     
 /*        STDIN    Function
 -----    --------
