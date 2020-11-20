@@ -44,6 +44,7 @@ public static long prison(int n, int m, List<Integer> h, List<Integer> v)
 ///////////////////////////////////////////
           
         //fill both arrats with values of 1
+        //we will set these to 0 later if need be
         for(int i =0 ;i<= m;i++)
         {
             horizontal[i] = 1;   
@@ -87,7 +88,7 @@ public static long prison(int n, int m, List<Integer> h, List<Integer> v)
         for(int k = 0; k<horizontal.length;k++)
         {
 
-
+            
             if(horizontal[k] == 0)
             {
                 horizontalRunning++;
