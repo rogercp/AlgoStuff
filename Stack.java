@@ -75,9 +75,9 @@ public class Stack
 
          RealStack myStack = new RealStack(node1,node2,2);
 
-            myStack.push(3);
-            myStack.push(4);
-            myStack.push(7);
+            myStack.push(32);
+            myStack.push(44);
+            myStack.push(72);
             System.out.println(myStack.get_num());
             myStack.pop();
             System.out.println(myStack.get_num());
