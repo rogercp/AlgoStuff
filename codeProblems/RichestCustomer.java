@@ -10,13 +10,31 @@ public class RichestCustomer {
     {
 
 
-    	int theOne = 1;
+    	int theOne =0;
+
+    	int overallMaximum = 0;
+
+    	for( int i = 0; i<vals.length; i++)
+    	{
+    		int runningTotal = 0;
+    		for( int j = 0; j<vals[i].length; j++)
+    		{
+
+    			runningTotal = runningTotal + vals[i][j];
+
+    		}
+
+    		if(runningTotal >= overallMaximum)
+    		{
+
+    			theOne = i;
 
 
+    		}
+    		overallMaximum = Math.max(overallMaximum,runningTotal);
 
 
-
-
+    	}
 
 
     	return theOne; 
@@ -27,9 +45,9 @@ public class RichestCustomer {
     { 
         RichestCustomer program = new RichestCustomer(); 
 
-		int[][] twoDArr={{1,5},{7,3},{3,5}};
+		int[][] twoDArr={{2,8,7},{7,1,3},{1,9,5}};
 
-        int returnval = program.findRichestCustomertwoDArr();
+        int returnval = program.findRichestCustomer(twoDArr);
 
         System.out.println(returnval);
 
