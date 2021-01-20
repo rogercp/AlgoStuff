@@ -11,8 +11,8 @@ class SlidingWindowMax {
     public int[] maxInWindow(int []intArray , int k) 
     {
 
+        
         int[] newArr = new int[intArray.length - k +1];
-
 
         
         for(int i=0; i<newArr.length; i++)

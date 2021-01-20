@@ -70,6 +70,8 @@ class FirstUniqueCharInString {
 
         int result = program.firstUniqChar("loveleetcode");
 
+
+
         System.out.println(result);
        
     } 

@@ -7,7 +7,6 @@ import java.util.*;
 public class PalindromeLongest
 {
 
-
 	public String lengthOfLongestPalindrome(String s) 
 	{
         
@@ -97,7 +96,6 @@ public class PalindromeLongest
 		// System.out.println(program.lengthOfLongestPalindrome("bb"));
 		// System.out.println(program.lengthOfLongestPalindrome("racecar"));
 		System.out.println(program.lengthOfLongestPalindrome("babmadamab"));
-
 
 
 	}
