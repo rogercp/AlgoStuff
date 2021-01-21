@@ -32,12 +32,16 @@ public class GoodPairs{
         for (Entry<Integer,Integer> pair : myMap.entrySet())
         {
 
-        System.out.println(pair.getKey()+" "+pair.getValue());
+            System.out.println(pair.getKey()+" "+pair.getValue());
 
-        
+
+            int currentval =  Math.floorDiv(pair.getValue() * (pair.getValue() - 1), 2);
+                   
+
+            counter = counter + currentval;
+
         }
 
-// n * (n – 1) // 2 
             return counter;
 
     }
