@@ -1,7 +1,7 @@
 
-import java.util.HashMap;
-import java.util.*;
 
+import java.util.*;
+import java.util.Map.*;
 
 
 // Given an array of integers nums.
@@ -13,7 +13,7 @@ import java.util.*;
 public class GoodPairs{ 
   
     static int findNumOfGoodPairs(int[] vals) 
-    {
+    { 
 
 
         HashMap<Integer,Integer> myMap = new HashMap<Integer,Integer>();
@@ -25,11 +25,17 @@ public class GoodPairs{
         for(int i = 0; i<vals.length; i++)
         {
 
-            myMap.put(vals[i],map.getOrDefault(vals[i],0)+1);
+            myMap.put(vals[i],myMap.getOrDefault(vals[i],0)+1);
 
         }
 
-        for()
+        for (Entry<Integer,Integer> pair : myMap.entrySet())
+        {
+
+        System.out.println(pair.getKey()+" "+pair.getValue());
+
+        
+        }
 
 // n * (n – 1) // 2 
             return counter;
@@ -43,7 +49,7 @@ public class GoodPairs{
 
 		int[] myarr={1,2,3,1,1,3};
 
-        int returnval = program.findNumOfGoodPairs(twoDArr);
+        int returnval = program.findNumOfGoodPairs(myarr);
 
         System.out.println(returnval);
 
