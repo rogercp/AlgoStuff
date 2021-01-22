@@ -35,6 +35,8 @@ public class GoodPairs{
             System.out.println(pair.getKey()+" "+pair.getValue());
 
 
+            // n * (n – 1) // 2 
+
             int currentval =  Math.floorDiv(pair.getValue() * (pair.getValue() - 1), 2);
                    
 
@@ -57,11 +59,6 @@ public class GoodPairs{
 
         System.out.println(returnval);
 
-
-        // for(int i= 0;i<twoDArr.length;i++ )
-        // {
-        // 	 System.out.println(twoDArr[i][0]);
-        // }
 
        
     } 
