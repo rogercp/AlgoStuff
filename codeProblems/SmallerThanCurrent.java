@@ -22,12 +22,32 @@ public class SmallerThanCurrent{
 
         Arrays.sort(vals);  
 
+        int copyPointer;
+       
 
 
+        for(int i = 0 ; i<copy.length; i++)
+        {
+
+            int sortedPointer = 0;
+            int innerCounter = 0;
+            int currentNum = copy[i];
+
+            while(vals[sortedPointer] < currentNum )
+            {
+                sortedPointer = sortedPointer + 1;
+
+                innerCounter = innerCounter +1;
+
+            }
+
+            returnArr[i] = innerCounter;
 
 
+        }
+        
 
-        return copy;
+        return returnArr;
 
     }
    
@@ -36,7 +56,9 @@ public class SmallerThanCurrent{
     { 
         SmallerThanCurrent program = new SmallerThanCurrent(); 
 
-		int[] myarr={8,1,2,2,3};
+		int[] myarr={6,5,4,8};
+        
+        // 8,1,2,2,3
 
         int[] returnval = program.returnAmountOfNumsSmallerThanCurrent(myarr);
 
