@@ -2,7 +2,9 @@
 
 import java.util.*;
 
+// Given a pattern and a string s, find if s follows the same pattern.
 
+// Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.
 
 public class WordPattern{ 
   
@@ -10,6 +12,26 @@ public class WordPattern{
     { 
 
 
+        HashMap<Character,String> myMap = new Map<Character,String>();
+
+        boolean returBool;
+
+        int i;
+        int j;
+
+
+        while(i< pattern.length || j < s.length)
+        {
+
+
+
+
+
+            
+        }
+
+
+        return returnBool;
       
 
     }
@@ -24,6 +46,5 @@ public class WordPattern{
         System.out.println(returnval);
 
 
-       
     } 
 } 
