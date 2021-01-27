@@ -14,21 +14,43 @@ public class WordPattern{
 
         HashMap<Character,String> myMap = new Map<Character,String>();
 
-        boolean returBool;
+        boolean returnBool = true;
 
         int i;
-        int j;
+       
 
 
-        while(i< pattern.length || j < s.length)
+        while(i< pattern.length)
         {
 
+            int j;
+
+            while( s[j] != "" || j < s.length)
+            {
 
 
+                myMap.put(pattern[i],map.getOrDefault(pattern[i],s[j]));
+
+                String currentString;
 
 
-            
-        }
+                if(myMap.get(pattern.charAt(i)) == currentString)
+                {
+                    i++;
+                    j++;
+
+                    continue;
+
+                }else
+                {
+                    returnBool = false;
+
+                    break;
+
+                }
+           
+            }
+             
 
 
         return returnBool;
