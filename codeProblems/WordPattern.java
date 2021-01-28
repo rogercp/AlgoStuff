@@ -19,16 +19,16 @@ public class WordPattern{
         int i;
        
 
+        int j;
 
         while(i< pattern.length)
         {
 
-            int j;
-
-            while( s[j] != "" || j < s.length)
+            String currentString 
+            
+            while( s.charAt(j) != " " || j < s.length)
             {
-
-
+ 
                 myMap.put(pattern[i],map.getOrDefault(pattern[i],s[j]));
 
                 String currentString;
