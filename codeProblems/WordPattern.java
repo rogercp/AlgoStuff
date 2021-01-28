@@ -18,36 +18,43 @@ public class WordPattern{
 
         int i;
        
-
         int j;
 
         while(i< pattern.length)
         {
 
-            String currentString 
+            String currentString = ""
             
-            while( s.charAt(j) != " " || j < s.length)
+            while(j < s.length)
             {
  
-                myMap.put(pattern[i],map.getOrDefault(pattern[i],s[j]));
+                String currentChar = s.charAt(j);
 
-                String currentString;
+                currentString += currentChar;
 
-
-                if(myMap.get(pattern.charAt(i)) == currentString)
+                if( s.charAt(j) != " ")
                 {
+
+                    myMap.put(pattern[i],map.getOrDefault(pattern[i],s[j]));
+
+                    if(myMap.get(pattern.charAt(i)) == currentString)
+                    {
                     i++;
                     j++;
 
                     continue;
 
-                }else
-                {
+                    }else
+                    {
                     returnBool = false;
 
                     break;
 
+                    }
+
                 }
+                
+               
            
             }
              
