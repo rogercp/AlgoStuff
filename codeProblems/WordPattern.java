@@ -12,7 +12,7 @@ public class WordPattern{
     { 
 
 
-        HashMap<Character,String> myMap = new Map<Character,String>();
+        Map<Character,String> myMap = new HashMap<Character,String>();
 
         boolean returnBool = true;
 
@@ -20,15 +20,15 @@ public class WordPattern{
        
         int j;
 
-        while(i< pattern.length)
+        while(i< pattern.length())
         {
-
-            String currentString = ""
-            
-            while(j < s.length)
+  
+            while(j < s.length())
             {
  
-                String currentChar = s.charAt(j);
+                String currentString = "";
+
+                String currentChar = String.valueOf(s.charAt(j));
 
                 currentString += currentChar;
 
@@ -61,6 +61,7 @@ public class WordPattern{
 
 
         return returnBool;
+    }
       
 
     }
