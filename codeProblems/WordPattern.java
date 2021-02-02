@@ -32,7 +32,7 @@ public class WordPattern{
 
                 currentString += currentChar;
 
-                if( s.charAt(j) != " ")
+                if( s.charAt(j) != ' ')
                 {
 
                     myMap.put(pattern[i],map.getOrDefault(pattern[i],s[j]));
