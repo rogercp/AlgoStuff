@@ -16,9 +16,9 @@ public class WordPattern{
 
         boolean returnBool = true;
 
-        int i;
+        int i = 0;
        
-        int j;
+        int j = 0;
 
         while(i< pattern.length())
         {
@@ -26,18 +26,24 @@ public class WordPattern{
             while(j < s.length())
             {
  
-                String currentString = "";
+                // String currentString = "";
 
-                String currentChar = String.valueOf(s.charAt(j));
+                StringBuilder sb = new StringBuilder();
 
-                currentString += currentChar;
+                // String currentChar = String.valueOf(s.charAt(j));
+
+                // currentString += currentChar;
+
+                sb.append(s.charAt(j));
+
+                System.out.println(sb.toString());
 
                 if( s.charAt(j) != ' ')
                 {
 
-                    myMap.put(pattern[i],map.getOrDefault(pattern[i],s[j]));
+                    myMap.put(pattern.charAt(i),sb.toString());
 
-                    if(myMap.get(pattern.charAt(i)) == currentString)
+                    if(myMap.get(pattern.charAt(i)) == sb.toString())
                     {
                     i++;
                     j++;
@@ -60,10 +66,10 @@ public class WordPattern{
              
 
 
-        return returnBool;
+        
     }
       
-
+    return returnBool;
     }
    
 
