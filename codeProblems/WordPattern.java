@@ -38,7 +38,7 @@ public class WordPattern{
 
                 System.out.println(sb.toString());
 
-                if( s.charAt(j) != ' ')
+                if( s.charAt(j) == ' ')
                 {
 
                     myMap.put(pattern.charAt(i),sb.toString());
