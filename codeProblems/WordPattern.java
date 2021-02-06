@@ -20,15 +20,18 @@ public class WordPattern{
        
         int j = 0;
 
+
+
         while(i< pattern.length())
         {
   
+            StringBuilder sb = new StringBuilder();
+
             while(j < s.length())
             {
  
                 // String currentString = "";
 
-                StringBuilder sb = new StringBuilder();
 
                 // String currentChar = String.valueOf(s.charAt(j));
 
@@ -38,20 +41,22 @@ public class WordPattern{
 
                 System.out.println(sb.toString());
 
-                if( s.charAt(j) == ' ')
+                if(s.charAt(j) == ' ')
                 {
+
 
                     myMap.put(pattern.charAt(i),sb.toString());
 
                     if(myMap.get(pattern.charAt(i)) == sb.toString())
                     {
-                    i++;
-                    j++;
+                        i++;
+                        j++;
 
                     continue;
 
                     }else
                     {
+
                     returnBool = false;
 
                     break;
@@ -59,7 +64,7 @@ public class WordPattern{
                     }
 
                 }
-                
+
                
            
             }
