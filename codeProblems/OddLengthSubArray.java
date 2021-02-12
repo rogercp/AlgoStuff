@@ -21,12 +21,19 @@ public class OddLengthSubArray {
         {
 
         int innerPointer = 0;
-        innerAccumulator = 0;
+        int innerAccumulator = 0;
 
-          while(innerPointer <=oddPointer)
+          while(innerPointer <= oddPointer)
           {
 
             innerAccumulator += vals[innerPointer];
+
+            if(vals[innerPointer] == vals[oddPointer])
+            {
+
+                innerPointer ++;
+
+            }
 
           }
 
@@ -42,15 +49,42 @@ public class OddLengthSubArray {
         return accumulator;
 
     }
+
+
+
+    //mathy way 
+    static int sumOddLengthSubarrays2(int[] vals) 
+    {
+
+        int accumulator = 0;
+        int n == vals.length;
+
+
+        for(int i = 0; i<n; i++)
+        {
+            int left = i;
+            int right = n -i-1;
+            
+            int odd_odd = (left+1)/2*((right+1)/2);
+            int even_even = (left+2)/2*((right+2)/2);
+            accumulator += arr[i] * (odd_odd +even_even);
+        }
+        
+
+
+        return accumulator;
+
+    }
+   
    
 
     public static void main(String args[]) 
     { 
         OddLengthSubArray program = new OddLengthSubArray(); 
 
-		int[][] twoDArr={{2,8,7},{7,1,3},{1,9,5}};
+		int[] myArr={1,4,2,5,3};
 
-        int returnval = program.findRichestCustomer(twoDArr);
+        int returnval = program.sumOddLengthSubarrays(myArr);
 
         System.out.println(returnval);
 
