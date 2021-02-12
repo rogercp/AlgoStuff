@@ -64,9 +64,13 @@ public class OddLengthSubArray {
         {
             int left = i;
             int right = n -i-1;
-            
+
+            //odd+ arr[i]+odd
             int odd_odd = (left+1)/2*((right+1)/2);
+
+            //even +arr[i] +even
             int even_even = (left+2)/2*((right+2)/2);
+
             accumulator += arr[i] * (odd_odd +even_even);
         }
         
