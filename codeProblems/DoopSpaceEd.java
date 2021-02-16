@@ -17,6 +17,34 @@ import java.util.*;
 // so we can't upgrade our RAM. So we need to optimize for space!
 
 public class DoopSpaceEd{ 
+
+
+
+
+    static int findOneDoopOptimizedForTime( int[] arr) 
+    { 
+
+		Set<Integer> numbersSeen = new HashSet<>();
+
+		    for (int number : numbers) 
+		    {
+		        if (numbersSeen.contains(number)) 
+		        {
+		            return number;
+		        } else 
+		        {
+		            numbersSeen.add(number);
+		        }
+		    }
+
+    	throw new IllegalArgumentException("no duplicate!");
+
+
+
+    }
+
+
+
   
     static int findOneDoop( int[] arr) 
     { 
