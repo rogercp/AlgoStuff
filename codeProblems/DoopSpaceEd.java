@@ -40,6 +40,36 @@ public class DoopSpaceEd{
     	throw new IllegalArgumentException("no duplicate!");
 
 
+    }
+
+
+static int findOneDoopOptimizedForSpaceButHighTime( int[] arr) 
+    { 
+
+		for (int needle = 1; needle < numbers.length; needle++) 
+		{
+			
+        boolean hasBeenSeen = false;
+
+        for (int number : numbers) 
+
+        {
+            if (number == needle) 
+            {
+                if (hasBeenSeen) 
+                {
+                    return number;
+                } else 
+                {
+                    hasBeenSeen = true;
+                }
+            }
+        }
+    }
+
+    // whoops--no duplicate
+    throw new IllegalArgumentException("no duplicate!");
+
 
     }
 
@@ -48,6 +78,47 @@ public class DoopSpaceEd{
   
     static int findOneDoop( int[] arr) 
     { 
+
+    	int floor = 1;
+    	int ceiling = numbers.length - 1;
+
+  		while (floor < ceiling) 
+  		{
+
+
+        int midpoint = floor + ((ceiling - floor) / 2);
+        int lowerRangeFloor   = floor;
+        int lowerRangeCeiling = midpoint;
+        int upperRangeFloor   = midpoint + 1;
+        int upperRangeCeiling = ceiling;
+
+        int itemsInLowerRange = 0;
+        for (int item : numbers) 
+        {
+
+            if (item >= lowerRangeFloor && item <= lowerRangeCeiling) {
+                itemsInLowerRange += 1;
+            }
+        }
+
+        int distinctPossibleIntegersInLowerRange = lowerRangeCeiling - lowerRangeFloor + 1;
+
+        if (itemsInLowerRange > distinctPossibleIntegersInLowerRange) 
+        {
+
+            floor   = lowerRangeFloor;
+            ceiling = lowerRangeCeiling;
+        } else 
+        {
+
+            floor   = upperRangeFloor;
+            ceiling = upperRangeCeiling;
+        }
+    	}
+
+    
+    	return floor;
+
 
 
     }
