@@ -22,6 +22,20 @@ public class CakeTheif
     }
 
 
+    //greedily approach 
+    public static long maxDuffelBagValueWithCapacity1(CakeType[] cakeTypes) {
+
+    long maxValueAtCapacity1 = 0L;
+
+    for (CakeType cakeType : cakeTypes) {
+        if (cakeType.weight == 1) {
+            maxValueAtCapacity1 = Math.max(maxValueAtCapacity1, cakeType.value);
+        }
+    }
+
+    return maxValueAtCapacity1;
+}
+
 
 
 
@@ -51,7 +65,7 @@ public class CakeTheif
 }
 
 
-
+ 
 
 
 
