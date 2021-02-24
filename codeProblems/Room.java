@@ -57,12 +57,8 @@ public class Room{
 
             returnArr[i] = numTimes;
 
-
-
          }
         
-
-
 
          return returnArr;
     }

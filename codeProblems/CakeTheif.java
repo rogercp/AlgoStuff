@@ -36,7 +36,32 @@ public class CakeTheif
     return maxValueAtCapacity1;
 }
 
+  public static long maxDuffelBagValue(CakeType[] cakeTypes, int weightCapacity) {
 
+    long[] maxValuesAtCapacities = new long[weightCapacity + 1];
+
+    for (int currentCapacity = 0; currentCapacity <= weightCapacity; currentCapacity++) {
+
+        long currentMaxValue = 0;
+
+        for (CakeType cakeType : cakeTypes) {
+
+       
+            if (cakeType.weight <= currentCapacity) {
+
+            
+                long maxValueUsingCake = cakeType.value
+                    + maxValuesAtCapacities[currentCapacity - cakeType.weight];
+
+            
+                currentMaxValue = Math.max(maxValueUsingCake, currentMaxValue);
+            }
+        }
+
+       
+        maxValuesAtCapacities[currentCapacity] = currentMaxValue;
+    }
+}
 
 
     public static void main(String[] args)
