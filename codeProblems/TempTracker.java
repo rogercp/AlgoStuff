@@ -24,6 +24,50 @@ public class TempTracker {
    
 
 
+    private int[] occurrences = new int[111];  
+    private int maxOccurrences;
+    private int mode;
+
+ 
+    private int numberOfReadings;
+    private long totalSum;
+    private double mean;
+
+    private int minTemp = Integer.MAX_VALUE;
+    private int maxTemp = Integer.MIN_VALUE;
+
+    public void insert(int temperature) {
+
+       
+        occurrences[temperature]++;
+        if (occurrences[temperature] > maxOccurrences) {
+            mode = temperature;
+            maxOccurrences = occurrences[temperature];
+        }
+
+        numberOfReadings++;
+        totalSum += temperature;
+        mean = (double) totalSum / numberOfReadings;
+
+        minTemp = Math.min(minTemp, temperature);
+        maxTemp = Math.max(maxTemp, temperature);
+    }
+
+    public int getMax() {
+        return maxTemp;
+    }
+
+    public int getMin() {
+        return minTemp;
+    }
+
+    public double getMean() {
+        return mean;
+    }
+
+    public int getMode() {
+        return mode;
+    }
 
 
 
