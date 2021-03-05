@@ -21,34 +21,35 @@ import java.util.*;
 public class TempTracker { 
   
    
-   
-
-
-    private int[] occurrences = new int[111];  
+    // for mode
+    private int[] occurrences = new int[111];  // array of 0s at indices 0..110
     private int maxOccurrences;
     private int mode;
 
- 
+    // for mean
     private int numberOfReadings;
     private long totalSum;
     private double mean;
 
+    // for min and max
     private int minTemp = Integer.MAX_VALUE;
     private int maxTemp = Integer.MIN_VALUE;
 
     public void insert(int temperature) {
 
-       
+        // for mode
         occurrences[temperature]++;
         if (occurrences[temperature] > maxOccurrences) {
             mode = temperature;
             maxOccurrences = occurrences[temperature];
         }
 
+        // for mean
         numberOfReadings++;
         totalSum += temperature;
         mean = (double) totalSum / numberOfReadings;
 
+        // for min and max
         minTemp = Math.min(minTemp, temperature);
         maxTemp = Math.max(maxTemp, temperature);
     }
@@ -68,7 +69,6 @@ public class TempTracker {
     public int getMode() {
         return mode;
     }
-
 
 
 
